@@ -44,7 +44,7 @@ describe( "jwt-token/headers", () => {
 
         it( "ignores empty token", () => {
             const res = new MockRes();
-            authHeader.setToken( res.getHeaders(), null );
+            authHeader.setToken( res.getHeaders(), ( null: any ) );
             expect( res.getHeader( "Authorization" ) ).toEqual( undefined );
 
             authHeader.setToken( res.getHeaders(), "" );
