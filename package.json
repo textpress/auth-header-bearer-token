@@ -9,6 +9,7 @@
     "scripts": {
         "test": "jest",
         "flow": "flow check",
+        "flow-install-types": "flow-typed install --overwrite",
         "bump": "gulp bump --part",
         "build": "yarn build:clean && yarn build:lib && yarn build:flow",
         "build:clean": "rimraf lib",
