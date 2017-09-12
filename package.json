@@ -9,13 +9,21 @@
     "scripts": {
         "test": "jest",
         "flow": "flow check",
-        "build": "yarn run build:clean && yarn run build:lib && yarn run build:flow",
+        "bump": "gulp bump --part",
+        "build": "yarn build:clean && yarn build:lib && yarn build:flow",
         "build:clean": "rimraf lib",
         "build:lib": "babel -d lib src --ignore '**/__tests__/**'",
-        "build:flow": "flow-copy-source -v -i '**/__tests__/**' src lib"
+        "build:flow": "flow-copy-source -v -i '**/__tests__/**' src lib",
+        "ci-test": "jest",
+        "ci-build": "yarn build"
+    },
+    "jest": {
+      "testEnvironment": "node",
+      "coverageDirectory": "<rootDir>/.jest-coverage"
     },
     "dependencies": {
         "@textpress/babel-preset-textpress": "^0.1.0",
+        "@textpress/gulp-bump-version": "^0.2.0",
         "babel-plugin-transform-object-rest-spread": "^6.26.0",
         "babel-plugin-transform-runtime": "^6.23.0",
         "bluebird": "^3.5.0"
