@@ -16,7 +16,8 @@
     "build:lib": "babel -d lib src --ignore '**/__tests__/**'",
     "build:flow": "flow-copy-source -v -i '**/__tests__/**' src lib",
     "ci-test": "jest",
-    "ci-build": "yarn build"
+    "ci-build": "yarn build",
+    "ci-release-note": "conventional-github-releaser -p eslint"
   },
   "jest": {
     "testEnvironment": "node",
@@ -32,6 +33,7 @@
     "@textpress/babel-preset-textpress": "^0.1.0",
     "@textpress/eslint-config-textpress": "^0.0.6",
     "@textpress/gulp-bump-version": "^0.2.0",
+    "conventional-github-releaser": "^1.1.12",
     "eslint": "^4.6.1",
     "flow": "^0.2.3",
     "flow-bin": "^0.54.1",
