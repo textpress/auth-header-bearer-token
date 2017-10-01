@@ -3,7 +3,7 @@
 type Headers = { [string]: string };
 
 
-export function setToken( headers: Headers, token: string ) {
+export function setToken( headers: Headers, token: ?string ) {
     if ( token )
         headers[ "authorization" ] = `Bearer ${token}`;
 }
