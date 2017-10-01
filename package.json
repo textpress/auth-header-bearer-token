@@ -1,6 +1,6 @@
 {
   "name": "@textpress/auth-header-bearer-token",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "Authorization header/bearer token utils",
   "main": "lib/index.js",
   "repository": "github:textpress/auth-header-bearer-token",
