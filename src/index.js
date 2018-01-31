@@ -9,8 +9,8 @@ export function setToken( headers: Headers, token: ?string ) {
 }
 
 
-export function extractToken( headers: ?Headers ): ?string {
-    const header = ( headers || {} )[ "authorization" ];
+export function extractToken( headers: Headers = {} ): ?string {
+    const header = headers[ "authorization" ] || headers[ "x-amzn-remapped-authorization" ];
     if ( !header )
         return null;
     const match = header.match( /^Bearer (.+)$/ );
