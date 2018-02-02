@@ -8,7 +8,6 @@ export function setToken( headers: Headers, token: ?string ) {
         headers[ "authorization" ] = `Bearer ${token}`;
 }
 
-
 export function extractToken( headers: ?Headers ): ?string {
     const header = headers && ( headers[ "authorization" ] || headers[ "x-amzn-remapped-authorization" ] );
     if ( !header )
