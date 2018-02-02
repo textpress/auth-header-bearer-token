@@ -31,6 +31,10 @@ describe( "jwt-token/headers", () => {
             expect( authHeader.extractToken( req.headers ) ).toEqual( null );
         } );
 
+        it( "accepts null", () => {
+            expect( authHeader.extractToken( null ) ).toEqual( null );
+        } );
+
     } );
 
 
