@@ -26,14 +26,12 @@
       "**/__tests__/**/*.test.js"
     ]
   },
-  "dependencies": {
-    "bluebird": "^3.5.0"
-  },
   "devDependencies": {
     "@textpress/babel-preset-textpress": "^0.1.0",
     "@textpress/eslint-config-textpress": "^0.0.6",
     "@textpress/gulp-bump-version": "^0.2.0",
     "conventional-github-releaser": "^1.1.12",
+    "bluebird": "^3.5.0",
     "eslint": "^4.6.1",
     "flow": "^0.2.3",
     "flow-bin": "^0.54.1",
